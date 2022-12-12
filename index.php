@@ -118,6 +118,26 @@
                 font-size: 1.2em;
             }
 
+            @media only screen and (min-width: 768px) {
+                /* For desktop: */
+                .bg-footer .container .d-flex, .bg-footer-lighter .d-flex {
+                    flex-direction: row;
+                }
+
+            }
+
+            @media only screen and (max-width: 768px) {
+                /* For mobile phones: */
+                .bg-footer .container .d-flex, .bg-footer-lighter .d-flex {
+                    flex-direction: column;
+                }
+
+                #subscribe-button-wrapper {
+                    width: 20em;
+                }
+
+            }
+
             body {
                 font-family: 'Open Sans', sans-serif;
                 font-weight: 400;
@@ -1042,16 +1062,16 @@
                 </div>
             </section>
 
-            <section>
+            <section class="bg-footer-lighter">
 <!--                Change Company Logo From Here.-->
-                    <div class="d-flex flex-row justify-content-around bg-footer-lighter text-white">
+                    <div class="d-flex justify-content-around text-white">
                         <div  id="footer-company-logo-wrapper" class="mt-3 mb-3">
                             <a href="http://104.152.168.205/~alipata" class="d-block">
                                 <img id="footer-company-logo" class="lazyloaded" src="http://104.152.168.205/~alipata/public/uploads/all/ajl18HSJcPWm15PIv4W2xjiApZMu4qHorsmGD1k0.png" data-src="http://104.152.168.205/~alipata/public/uploads/all/ajl18HSJcPWm15PIv4W2xjiApZMu4qHorsmGD1k0.png" alt="Alipata" height="44">
                             </a>
                         </div>
 
-                        <div class="mt-3 mb-3">
+                        <div class="mt-3 mb-3 text-center">
                             <div>
                                 <p class="m-0 font-size-1-5 font-weight-bold">
                                     Subscribe Newsletter
@@ -1064,7 +1084,7 @@
                                 <form  method="POST" action="">
                                     @csrf
                                     @method("POST")
-                                    <div id="subscribe-button-wrapper" class="input-group mb-3 p-0">
+                                    <div id="subscribe-button-wrapper" class="input-group mb-3 p-0 mx-auto">
                                         <input id="subscribe-search-input" type="email" class="form-control" placeholder="Your Email Address"  name="email" required>
                                         <div class="input-group-append p-0">
                                             <button type="submit" id="subscribe-button" class="input-group-text text-white font-weight-bold m-0" >
@@ -1076,7 +1096,7 @@
                             </div>
                         </div>
 
-                        <div class="mt-3 mb-3">
+                        <div class="mt-3 mb-3 text-center">
                             <div>
                                 <p class="m-0 font-size-1-5 font-weight-bold">
                                     Download Alipata App
@@ -1101,7 +1121,7 @@
 
             <section class="bg-dark py-5 text-light footer-widget bg-footer">
                 <div class="container">
-                    <div class="d-flex flex-row justify-content-between">
+                    <div class="d-flex justify-content-between">
                         <div class="text-center text-md-left mt-4">
                             <h6 class="text-uppercase border-bottom border-gray-900 pb-2 mb-4 font-weight-bold">
                                 LET US HELP YOU
